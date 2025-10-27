@@ -25,7 +25,7 @@ class NotionAPITester:
         self.headers = {"Authorization": f"Bearer {self.api_token}"}
         
         # 测试数据
-        self.test_page_id = "2995ff127acc80b9bfe6c77819a09d7c"
+        self.test_page_id = "23e5ff127acc80de9e15cd58adfde504"
         self.test_database_id = "2995ff127acc805a81d5e78dbea2221a"
     
     def test_server_health(self) -> bool:
@@ -121,7 +121,7 @@ class NotionAPITester:
             response = requests.get(
                 f"{self.base_url}/api/database/{self.test_database_id}/pages",
                 headers=self.headers,
-                params={"page_size": 10},
+                params={"page_size": 50},
                 timeout=30
             )
             
